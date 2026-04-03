@@ -1,0 +1,157 @@
+/* 🌌 BACKGROUND */
+body {
+    background: radial-gradient(circle at top, #020617, #020c1b, #000814);
+    color: #e6f1ff;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 0.8s ease;
+}
+
+/* ✨ FLOATING GLASS CARD */
+.card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 25px 80px rgba(0,0,0,0.8);
+    padding: 25px;
+    animation: floatCard 6s ease-in-out infinite;
+    position: relative;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatCard {
+    0% { transform: translateY(0px);}
+    50% { transform: translateY(-10px);}
+    100% { transform: translateY(0px);}
+}
+
+/* ✨ FADE IN */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* 🧊 TABLE FULL GLASS */
+.table {
+    color: #e6f1ff;
+    background: transparent;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+/* HEADER */
+.table thead th {
+    background: rgba(59,130,246,0.15);
+    color: #ffffff !important;
+    font-weight: 600;
+    border: none;
+    padding: 12px;
+}
+
+/* ROWS */
+.table tbody tr {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    color: #e6f1ff;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+/* CELLS */
+.table td {
+    color: #e6f1ff !important;
+    border: none;
+    padding: 12px;
+}
+
+/* HOVER */
+.table tbody tr:hover {
+    background: rgba(59,130,246,0.2);
+    transform: scale(1.01);
+}
+
+/* REMOVE BOOTSTRAP WHITE */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background: rgba(255,255,255,0.05);
+}
+
+/* 🔘 BUTTONS */
+.btn {
+    border-radius: 25px;
+    padding: 6px 14px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: none;
+}
+
+/* PRIMARY */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* DASHBOARD BUTTON */
+.btn-info {
+    background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+}
+
+/* DELETE */
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* EDIT */
+.btn-warning {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #000;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* 🔍 INPUT */
+input.form-control {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 20px;
+    padding: 8px 12px;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+/* 🔔 ALERT (WELCOME BAR) */
+.alert {
+    background: rgba(16, 185, 129, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #6ee7b7;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ✨ EXTRA GLOW BORDER (PREMIUM) */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    padding: 1px;
+    background: linear-gradient(120deg, #3b82f6, #06b6d4, #3b82f6);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.table td {
+    color: black !important;
+}
+
+.table th {
+    color: black !important;
+}
