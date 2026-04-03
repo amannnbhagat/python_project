@@ -1,3 +1,3 @@
 MONGO_URI = "mongodb://localhost:27017/"
 SECRET_KEY = "secret123"
-UPLOAD_FOLDER = "uploads"
+UPLOAD_FOLDER = "uploads
